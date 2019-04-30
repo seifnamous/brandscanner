@@ -1,0 +1,20 @@
+FROM python:3.6
+
+EXPOSE 4000
+WORKDIR /app
+
+COPY templates /app/templates
+COPY model /app/model
+COPY requirements.txt /app
+COPY app.py /app
+COPY config.py /app
+COPY db.py /app
+COPY routes.py /app
+COPY utils.py /app
+COPY data.py /app
+COPY model.py /app
+
+RUN python3.6 -m pip install --upgrade pip
+RUN python3.6 -m pip install -r requirements.txt
+
+CMD python3 app.py
