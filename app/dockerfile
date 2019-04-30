@@ -4,6 +4,7 @@ EXPOSE 4000
 WORKDIR /app
 
 COPY templates /app/templates
+COPY static /app/static
 COPY model /app/model
 COPY requirements.txt /app
 COPY app.py /app
@@ -13,6 +14,8 @@ COPY routes.py /app
 COPY utils.py /app
 COPY data.py /app
 COPY model.py /app
+COPY visualize.py /app
+COPY test.py /app
 
 RUN python3.6 -m pip install --upgrade pip
 RUN python3.6 -m pip install -r requirements.txt

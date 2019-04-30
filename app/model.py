@@ -1,11 +1,9 @@
 import numpy as np
 import pandas as pd
 from textblob import TextBlob
-import nltk
+from stop_words import get_stop_words
 import re
-from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-nltk.download('punkt')
 import string
 
 class ModeltextBlob:
@@ -36,7 +34,8 @@ class ModeltextBlob:
 
         emoticons = emoticons_happy.union(emoticons_sad)
 
-        stop_words = set(stopwords.words('english'))
+        stop_words = get_stop_words('en')
+
         word_tokens = word_tokenize(tweet)
         #after tweepy preprocessing the colon symbol left remain after      #removing mentions
         tweet = re.sub(r':', '', tweet)
