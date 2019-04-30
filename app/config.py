@@ -1,8 +1,8 @@
 class Config(object):
     config = {
             'user': 'root',
-            'password': 'Polytech1',
-            'host': 'localhost',
+            'password': 'root',
+            'host': 'db',
             'port': '3306',
             'database': 'Twits'
         }

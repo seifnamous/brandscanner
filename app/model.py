@@ -3,7 +3,9 @@ import pandas as pd
 from textblob import TextBlob
 from stop_words import get_stop_words
 import re
+import nltk
 from nltk.tokenize import word_tokenize
+
 import string
 
 class ModeltextBlob:
