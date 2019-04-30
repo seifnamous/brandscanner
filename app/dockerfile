@@ -5,7 +5,6 @@ WORKDIR /app
 
 COPY templates /app/templates
 COPY static /app/static
-COPY model /app/model
 COPY requirements.txt /app
 COPY app.py /app
 COPY config.py /app
